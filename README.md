@@ -106,6 +106,18 @@ Proves i exercicis a fer i entregar
 1. Reprodueix l'exemple fent servir diferents freqüències per la sinusoide. Al menys considera $f_x = 4$ kHz, a banda d'una
     freqüència pròpia en el marge audible. Comenta els resultats.
 
+He provat amb vàries freqüències dins del marge audible. Seguint l'exemple he obtingut la representació gràfica de la sinusoide i la representació del mòdul i la fase de la seva transformada de Fourier. A continuació deixaré els resultats d'establir fx=500 i fx=4k Hz. 
+Per fx = 500 Hz:
+<img src="img/fx500.png" width="480" align="center">
+
+<img src="img/fx500dft.png" width="480" align="center">
+Per fx = 4000 Hz:
+<img src="img/fx4000.png" width="480" align="center">
+
+<img src="img/fx4000dft.png" width="480" align="center">
+
+Si reproduim les sinusoides resultats podem notar com a més alta freqüència més aguda és la senyal. I veient els resutlats gràfics ...
+
 2. Modifica el programa per considerar com a senyal a analitzar el senyal del fitxer wav que has creat 
     (`x_r, fm = sf.read('nom_fitxer.wav')`).
 
