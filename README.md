@@ -127,15 +127,22 @@ Per **fx = 4000 Hz**:
 
 
 
-Si reproduim les sinusoides resultats podem notar com a més alta freqüència més aguda és la senyal. En el primer gràfic de cada freqüència podem veure com a mida que augmenta la freqüència disminueix el període, com era d'esperar ja que son inversament proporcionals (Tx=1/fx). També podem observar com la senyal es fa cada vegada més punxeguda i menys detallada. 
+Si reproduim les sinusoides resultats podem notar com a més alta freqüència més aguda és la senyal. En el primer gràfic de cada freqüència podem veure com a mida que augmenta la freqüència disminueix el període, com era d'esperar ja que son inversament proporcionals (Tx=1/fx). També podem observar com la senyal es fa cada vegada més punxeguda i menys detallada. Això és degut a que no hem modificat la freqüència de mostratge i no mostreja tantes mostres com seria necessari.  
 
-En els segons grafics de cada cas veiem una dada anomenada Ls que és el nombre de mostres corresponents a 5 períodes de la sinusoide. En els exemples que he fet servir Ls passa de 500 a 80 a 26 a 10 a mida que augmentem fx. En el gràfic del mòdul veiem els harmònics de la senyal  
+En els segons grafics de cada cas veiem una dada anomenada Ls que és el nombre de mostres corresponents a 5 períodes de la sinusoide. En els exemples que he fet servir Ls passa de 500 a 80 a 26 a 10 a mida que augmentem fx. En el gràfic del mòdul veiem els harmònics de la senyal. Quan fx és menor tenim dos pics clarament marcats. L'amplitud dels pics disminueix a mida que augmentem la freqüència.
+
+
 2. Modifica el programa per considerar com a senyal a analitzar el senyal del fitxer wav que has creat 
     (`x_r, fm = sf.read('nom_fitxer.wav')`).
 
     - Insereix a continuació una gràfica que mostri 5 períodes del senyal i la seva transformada.
 
     - Explica el resultat del apartat anterior.
+
+És el que ja he fet en l'exercici anterior, però ara creant els gràfics a través de la senyal x_r. Adjunto les resultats per fx=4k Hz: 
+
+<img src="img/ex2.png" width="380" align="center"> <img src="img/ex2b.png" width="380" align="center">
+
 
 3. Modifica el programa per representar el mòdul de la Transformada de Fourier en dB i l'eix d'abscisses en el marge de
     $0$ a $f_m/2$ en Hz.
@@ -155,6 +162,12 @@ En els segons grafics de cada cas veiem una dada anomenada Ls que és el nombre 
 >
 > $f_k = \frac{k}{N} f_m$
 
+<img src="img/ex3.png" width="380" align="center"> 
+
+Veiem que el lòbul amb l'amplitut més gran està situat a f=440 Hz tal i com esperàvem. El càlcul de l'amplitut dona 1, que seria 0 db tal i com mostra l'anterior gràfic. La mesura de freqüència sí que es correspon amb la freqüència de la sinusoide utilitzada (440 Hz). Els dos càlculs els podem comprovar en el fitxer de codi. 
+
+
+
 4. Tria un fitxer d'àudio en format wav i mono (el pots aconseguir si en tens amb altres formats amb el programa Audacity). 
     Llegeix el fitxer d'àudio i comprova:
 
@@ -164,6 +177,19 @@ En els segons grafics de cada cas veiem una dada anomenada Ls que és el nombre 
     - Representa la seva transformada en dB en funció de la freqüència, en el marge $f_m\le f\le f_m/2$.
     - Quines son les freqüències més importants del segment triat?
 
+Freqüència de mostratge: 44100 Hz
+
+Nombre de mostres de senyal: 1102
+
+Segment de 25ms, evolució temporal: 
+
+<img src="img/ex5.png" width="380" align="center"> 
+
+Transformada en dB en funció de la freqüència en el marge de 0 a fm/2: 
+
+<img src="img/ex5b.png" width="380" align="center"> 
+
+Les freqüències més importants del segment triat son les de voltant de el rang audible 20 Hz a 20kHz.
 
 Entrega
 -------
