@@ -106,18 +106,30 @@ Proves i exercicis a fer i entregar
 1. Reprodueix l'exemple fent servir diferents freqüències per la sinusoide. Al menys considera $f_x = 4$ kHz, a banda d'una
     freqüència pròpia en el marge audible. Comenta els resultats.
 
-He provat amb vàries freqüències dins del marge audible. Seguint l'exemple he obtingut la representació gràfica de la sinusoide i la representació del mòdul i la fase de la seva transformada de Fourier. A continuació deixaré els resultats d'establir fx=500 i fx=4k Hz. 
-Per fx = 500 Hz:
-<img src="img/fx500.png" width="480" align="center">
+He provat amb vàries freqüències dins del marge audible. Seguint l'exemple he obtingut la representació gràfica de la sinusoide i la representació del mòdul i la fase de la seva transformada de Fourier. A continuació deixaré els resultats d'establir fx=80, fx=500, fx=1500 i fx=4000 Hz. 
 
-<img src="img/fx500dft.png" width="480" align="center">
-Per fx = 4000 Hz:
-<img src="img/fx4000.png" width="480" align="center">
+Per **fx = 80 Hz**:
 
-<img src="img/fx4000dft.png" width="480" align="center">
+<img src="img/fx80.png" width="380" align="center"> <img src="img/fx80dft.png" width="380" align="center">
 
-Si reproduim les sinusoides resultats podem notar com a més alta freqüència més aguda és la senyal. I veient els resutlats gràfics ...
 
+Per **fx = 500 Hz**:
+
+<img src="img/fx500.png" width="380" align="center"> <img src="img/fx500dft.png" width="380" align="center">
+
+Per **fx = 1500 Hz**: 
+
+<img src="img/fx1500.png" width="380" align="center"> <img src="img/fx1500dft.png" width="380" align="center">
+
+Per **fx = 4000 Hz**:
+
+<img src="img/fx4000.png" width="380" align="center"> <img src="img/fx4000dft.png" width="380" align="center">
+
+
+
+Si reproduim les sinusoides resultats podem notar com a més alta freqüència més aguda és la senyal. En el primer gràfic de cada freqüència podem veure com a mida que augmenta la freqüència disminueix el període, com era d'esperar ja que son inversament proporcionals (Tx=1/fx). També podem observar com la senyal es fa cada vegada més punxeguda i menys detallada. 
+
+En els segons grafics de cada cas veiem una dada anomenada Ls que és el nombre de mostres corresponents a 5 períodes de la sinusoide. En els exemples que he fet servir Ls passa de 500 a 80 a 26 a 10 a mida que augmentem fx. En el gràfic del mòdul veiem els harmònics de la senyal  
 2. Modifica el programa per considerar com a senyal a analitzar el senyal del fitxer wav que has creat 
     (`x_r, fm = sf.read('nom_fitxer.wav')`).
 
